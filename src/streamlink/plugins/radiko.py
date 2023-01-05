@@ -54,7 +54,7 @@ class Radiko(Plugin):
         return url, token
 
     def _timefree(self, station_id, start_at):
-        m3u8_url = 'https://tf-rpaa.smartstream.ne.jp/tf/playlist.m3u8'
+        m3u8_url = 'https://tf-f-rpaa-radiko.smartstream.ne.jp/tf/playlist.m3u8'
         token, area_id = self._authorize()
         lsid = hashlib.md5(str(random.random()).encode('utf-8')).hexdigest()
         end_at = self._get_xml(start_at, station_id)
